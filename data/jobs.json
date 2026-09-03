@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Customer Service Specialist",
+    "type": "Direct",
+    "location": "Remote",
+    "vertical": "Insurance",
+    "featured": false,
+    "id": "job-1776629786533",
+    "posted": "2026-04-19"
+  },
+  {
+    "id": "job-001",
+    "title": "Senior DevOps Engineer",
+    "type": "Direct",
+    "location": "Remote · US",
+    "vertical": "Information Technology",
+    "posted": "2026-04-15",
+    "featured": true
+  },
+  {
+    "id": "job-002",
+    "title": "Staff Data Engineer",
+    "type": "Contract",
+    "location": "San Diego, CA",
+    "vertical": "Information Technology",
+    "posted": "2026-04-14",
+    "featured": true
+  },
+  {
+    "id": "job-003",
+    "title": "Cloud Infrastructure Architect",
+    "type": "C2H",
+    "location": "Remote · US",
+    "vertical": "Information Technology",
+    "posted": "2026-04-13",
+    "featured": true
+  },
+  {
+    "id": "job-004",
+    "title": "ML Platform Engineer",
+    "type": "Direct",
+    "location": "New York, NY",
+    "vertical": "Information Technology",
+    "posted": "2026-04-12",
+    "featured": true
+  },
+  {
+    "id": "job-005",
+    "title": "Principal DevSecOps Engineer",
+    "type": "Contract",
+    "location": "Remote · US",
+    "vertical": "Information Technology",
+    "posted": "2026-04-11",
+    "featured": false
+  },
+  {
+    "id": "job-006",
+    "title": "Bioinformatics Software Engineer",
+    "type": "C2H",
+    "location": "Boston, MA",
+    "vertical": "Life Sciences & Biotech",
+    "posted": "2026-04-10",
+    "featured": false
+  },
+  {
+    "id": "job-007",
+    "title": "Clinical Data Systems Analyst",
+    "type": "Contract",
+    "location": "Remote · US",
+    "vertical": "Life Sciences & Biotech",
+    "posted": "2026-04-09",
+    "featured": false
+  },
+  {
+    "id": "job-008",
+    "title": "Insurance Technology Architect",
+    "type": "Direct",
+    "location": "Hartford, CT",
+    "vertical": "Insurance",
+    "posted": "2026-04-08",
+    "featured": false
+  }
+]

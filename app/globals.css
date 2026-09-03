@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ───────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-slate-800 bg-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* ─── Components ─────────────────────────────────────────── */
+@layer components {
+
+  /* ── Buttons — Movate pill style ────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-coral text-white font-semibold
+           px-7 py-3.5 rounded-full
+           shadow-coral hover:shadow-coral-lg
+           hover:bg-brand-coral-dark
+           transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-brand-coral focus-visible:ring-offset-2;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-charcoal text-white font-semibold
+           px-7 py-3.5 rounded-full
+           hover:bg-brand-charcoal-deep
+           transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-brand-charcoal focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-brand-coral text-brand-coral font-semibold
+           px-7 py-3.5 rounded-full
+           hover:bg-brand-coral hover:text-white
+           transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-brand-coral focus-visible:ring-offset-2;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-brand-charcoal font-semibold
+           px-7 py-3.5 rounded-full shadow-sm
+           hover:bg-slate-50
+           transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-white focus-visible:ring-offset-2
+           focus-visible:ring-offset-brand-charcoal;
+  }
+
+  .btn-ghost-white {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-white/50 text-white font-semibold
+           px-7 py-3.5 rounded-full
+           hover:bg-white hover:text-brand-charcoal hover:border-white
+           transition-all duration-200;
+  }
+
+  /* ── Section labels ─────────────────────────────────── */
+  .section-eyebrow {
+    @apply inline-block text-xs font-bold uppercase tracking-[0.15em]
+           text-brand-coral mb-3;
+  }
+
+  .section-eyebrow-light {
+    @apply inline-block text-xs font-bold uppercase tracking-[0.15em]
+           text-brand-warm mb-3;
+  }
+
+  /* ── Headings ───────────────────────────────────────── */
+  .section-heading {
+    @apply font-display text-3xl md:text-[2.6rem] font-bold text-slate-900
+           leading-tight tracking-tight;
+  }
+
+  .section-heading-white {
+    @apply font-display text-3xl md:text-[2.6rem] font-bold text-white
+           leading-tight tracking-tight;
+  }
+
+  .section-sub {
+    @apply text-base md:text-lg text-slate-500 mt-4 max-w-2xl leading-relaxed;
+  }
+
+  .section-sub-light {
+    @apply text-base md:text-lg text-white/70 mt-4 max-w-2xl leading-relaxed;
+  }
+
+  /* ── Dividers ───────────────────────────────────────── */
+  .section-divider {
+    @apply w-12 h-1 bg-brand-coral rounded-full mx-auto mt-4 mb-0;
+  }
+
+  .section-divider-left {
+    @apply w-12 h-1 bg-brand-coral rounded-full mt-4 mb-0;
+  }
+
+  /* ── Cards ──────────────────────────────────────────── */
+  .card-base {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-card
+           hover:shadow-card-lg hover:-translate-y-0.5
+           transition-all duration-300;
+  }
+
+  /* ── Nav link ───────────────────────────────────────── */
+  .nav-link {
+    @apply relative text-sm font-medium text-slate-600 hover:text-brand-coral
+           transition-colors duration-200 pb-0.5
+           after:absolute after:bottom-0 after:left-0 after:h-0.5
+           after:w-0 after:bg-brand-coral after:rounded-full
+           hover:after:w-full after:transition-all after:duration-200;
+  }
+
+  /* ── Tags ───────────────────────────────────────────── */
+  .chip {
+    @apply inline-block text-xs font-semibold
+           bg-orange-50 text-brand-coral
+           px-3 py-1 rounded-full;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────── */
+@layer utilities {
+  /* Movate animated warm gradient text */
+  .gradient-text {
+    background: linear-gradient(90deg, #ff312b 0%, #ff863b 30%, #ffdb4a 60%, #ff5ca9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shimmer 5s linear infinite;
+  }
+
+  /* Coral text gradient */
+  .coral-text {
+    background: linear-gradient(90deg, #ff5542 0%, #ff863b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Animation delay helpers */
+  .delay-75  { animation-delay:  75ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-250 { animation-delay: 250ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+}

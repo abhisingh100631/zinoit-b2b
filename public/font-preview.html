@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Preview – zinoit tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@700;800&family=Nunito:wght@700;800&family=Outfit:wght@700;800&family=Space+Grotesk:wght@700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f1117;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 40px 24px;
+      font-family: system-ui, sans-serif;
+    }
+    h2 {
+      color: rgba(255,255,255,0.35);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .row {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 28px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255,255,255,0.07);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .row:hover { border-color: #ff5542; background: rgba(255,85,66,0.06); }
+    .label {
+      color: rgba(255,255,255,0.4);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      min-width: 140px;
+    }
+    .logo {
+      font-size: 36px;
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+    }
+    .z { color: #ffffff; }
+    .t { color: rgba(255,255,255,0.45); font-weight: 300; }
+
+    /* Current: Barlow Condensed */
+    .barlow .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; }
+
+    /* Option 1: DM Sans */
+    .dmsans .logo { font-family: 'DM Sans', sans-serif; font-weight: 800; }
+
+    /* Option 2: Nunito */
+    .nunito .logo { font-family: 'Nunito', sans-serif; font-weight: 800; }
+
+    /* Option 3: Outfit */
+    .outfit .logo { font-family: 'Outfit', sans-serif; font-weight: 800; }
+
+    /* Option 4: Space Grotesk */
+    .space .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+    /* Option 5: Montserrat (Proxima Nova lookalike) */
+    .montserrat .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+
+    /* Option 6: System (original) */
+    .system .logo { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-weight: 800; }
+
+    /* Option 7: System thin – both words at weight 300 */
+    .system-thin .logo { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; letter-spacing: 0.02em; }
+    .system-thin .z { color: #ffffff; font-weight: 300; }
+    .system-thin .t { color: rgba(255,255,255,0.55); font-weight: 300; }
+
+    /* Option 8: System – zinoit 400, tech 300 */
+    .system-mix .logo { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .system-mix .z { color: #ffffff; font-weight: 400; letter-spacing: 0.01em; }
+    .system-mix .t { color: rgba(255,255,255,0.55); font-weight: 300; letter-spacing: 0.04em; }
+
+    .badge {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 99px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .badge-current { background: rgba(255,85,66,0.15); color: #ff5542; }
+    .badge-orig { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); }
+  </style>
+</head>
+<body>
+  <h2>Pick a font for the zinoit logo</h2>
+
+  <div class="row barlow">
+    <span class="label">Barlow Condensed <span class="badge badge-current">current</span></span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row dmsans">
+    <span class="label">DM Sans</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row nunito">
+    <span class="label">Nunito</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row outfit">
+    <span class="label">Outfit</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row space">
+    <span class="label">Space Grotesk</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row montserrat">
+    <span class="label">Montserrat <span class="badge badge-orig">≈ Proxima Nova</span></span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row system">
+    <span class="label">System / Original <span class="badge badge-orig">was default</span></span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row system-thin">
+    <span class="label">System · All thin (300)</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+
+  <div class="row system-mix">
+    <span class="label">System · zinoit 400 / tech 300</span>
+    <div class="logo">
+      <span class="z">zinoit</span><span class="t">&nbsp;tech</span>
+    </div>
+  </div>
+</body>
+</html>

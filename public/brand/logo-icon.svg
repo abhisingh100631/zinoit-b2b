@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"
+     role="img" aria-label="Zinoit Tech">
+
+  <!--
+    Zinoit Tech LLC — z mark on navy field
+    ─────────────────────────────────────────────────────────────
+    Use on: app icons, social media profile pictures, email signatures,
+            any context requiring a self-contained square icon.
+    Navy field provides contrast on any background color.
+
+    Bars: 4 px  |  Diagonal ends: 7 px  |  Waist: 3 px
+    (Slightly finer strokes than logo-light/dark — optimised for
+    the contained format where the navy bg provides visual weight.)
+  -->
+
+  <!-- Navy rounded field -->
+  <rect width="44" height="44" rx="10" fill="#0B1F3A"/>
+
+  <!--
+    White z mark — sits on inner padding (x 5..39, y 6..38)
+
+    ① Top bar:  x 5..39, y 6..10
+    ② Diagonal: y=10 → x 32..39  (7 px right end)
+                y=22 → x 20..23  (3 px waist, centre x=21.5≈22)
+                y=34 → x 5..12   (7 px left end)
+    ③ Bottom:   x 5..39, y 34..38
+
+    Waist centre: top=(32+39)/2=35.5, bottom=(5+12)/2=8.5 → mid=22 ✓
+  -->
+
+  <!-- ① Top bar -->
+  <rect x="5" y="6" width="34" height="4" fill="white"/>
+
+  <!-- ② Tapered diagonal -->
+  <polygon points="32,10  39,10  23,22  12,34  5,34  21,22" fill="white"/>
+
+  <!-- ③ Bottom bar -->
+  <rect x="5" y="34" width="34" height="4" fill="white"/>
+
+</svg>
