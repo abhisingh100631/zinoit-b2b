@@ -101,10 +101,10 @@ export default function BookCallPage() {
       if (data.success) {
         setSubmitted(true);
       } else {
-        setError("Something went wrong. Please email us directly at hello@zinoit.com.");
+        setError("Something went wrong. Please email us directly at info@zinoit.com.");
       }
     } catch {
-      setError("Something went wrong. Please email us directly at hello@zinoit.com.");
+      setError("Something went wrong. Please email us directly at info@zinoit.com.");
     } finally {
       setSubmitting(false);
     }

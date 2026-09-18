@@ -86,10 +86,10 @@ export default function ContactPage() {
       if (data.success) {
         setSubmitted(true);
       } else {
-        setError("Something went wrong. Please email us directly at hello@zinoit.com.");
+        setError("Something went wrong. Please email us directly at info@zinoit.com.");
       }
     } catch {
-      setError("Something went wrong. Please email us directly at hello@zinoit.com.");
+      setError("Something went wrong. Please email us directly at info@zinoit.com.");
     } finally {
       setSubmitting(false);
     }
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     Reach us directly
                   </p>
                   <div className="space-y-4">
-                    <a href="mailto:hello@zinoit.com" className="flex items-center gap-3 group">
+                    <a href="mailto:info@zinoit.com" className="flex items-center gap-3 group">
                       <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 group-hover:border-brand-green/40 transition-colors">
                         <svg className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-green transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-[11px] text-slate-400 uppercase tracking-[0.1em] font-semibold mb-0.5">Email</p>
-                        <p className="text-sm text-slate-700 group-hover:text-brand-green transition-colors font-medium">hello@zinoit.com</p>
+                        <p className="text-sm text-slate-700 group-hover:text-brand-green transition-colors font-medium">info@zinoit.com</p>
                       </div>
                     </a>
 
