@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import HeroVisual from "@/components/HeroVisual";
 import AnimateIn from "@/components/AnimateIn";
+
+export const metadata: Metadata = {
+  title: "Zinoit — B2B Lead Generation, Demand Gen & Appointment Setting",
+  description:
+    "Zinoit is a B2B growth agency specializing in lead generation, appointment setting, demand generation, and ABM for ambitious revenue teams. Pay per qualified lead.",
+};
 
 /* ─── Ticker logos ──────────────────────────────────────── */
 const tickerItems = [
