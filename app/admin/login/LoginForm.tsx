@@ -29,7 +29,7 @@ export default function LoginForm({ loginAction, from }: Props) {
     `w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all duration-150 ${
       hasError
         ? "border-red-300 bg-red-50 focus:ring-2 focus:ring-red-200"
-        : "border-slate-200 focus:border-brand-coral focus:ring-2 focus:ring-brand-coral/20 bg-white"
+        : "border-slate-200 focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 bg-white"
     }`;
 
   return (

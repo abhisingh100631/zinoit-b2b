@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Zinoit Tech LLC – IT, Life Sciences & Insurance Staffing",
+  title: "Zinoit — B2B Lead Generation, Demand Gen & Appointment Setting",
   description:
-    "Zinoit Tech LLC is a US-based staffing company specializing in IT, Life Sciences, and Insurance talent. Contract, contract-to-hire, and full-time placements.",
+    "Zinoit is a B2B growth agency specializing in lead generation, appointment setting, and demand generation for ambitious revenue teams. Pay per qualified lead.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans">
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

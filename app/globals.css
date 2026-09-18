@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── Purple + Amber CSS custom properties ──────────────── */
+:root {
+  --color-primary:    #6B21A8;
+  --color-primary-dk: #581C87;
+  --color-secondary:  #F59E0B;
+  --color-accent:     #9B59D6;
+}
 
 /* ─── Base ───────────────────────────────────────────────── */
 @layer base {
@@ -13,7 +21,7 @@
   }
 
   body {
-    @apply text-slate-800 bg-white;
+    @apply text-slate-700 bg-white;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
@@ -25,71 +33,58 @@
 /* ─── Components ─────────────────────────────────────────── */
 @layer components {
 
-  /* ── Buttons — Movate pill style ────────────────────── */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
-           bg-brand-coral text-white font-semibold
+           bg-brand-green text-white font-semibold
            px-7 py-3.5 rounded-full
-           shadow-coral hover:shadow-coral-lg
-           hover:bg-brand-coral-dark
+           shadow-green hover:shadow-green-lg
+           hover:bg-brand-green-dark
            transition-all duration-200
            focus-visible:outline-none focus-visible:ring-2
-           focus-visible:ring-brand-coral focus-visible:ring-offset-2;
-  }
-
-  .btn-dark {
-    @apply inline-flex items-center justify-center gap-2
-           bg-brand-charcoal text-white font-semibold
-           px-7 py-3.5 rounded-full
-           hover:bg-brand-charcoal-deep
-           transition-all duration-200
-           focus-visible:outline-none focus-visible:ring-2
-           focus-visible:ring-brand-charcoal focus-visible:ring-offset-2;
+           focus-visible:ring-brand-green focus-visible:ring-offset-2;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2
-           border-2 border-brand-coral text-brand-coral font-semibold
+           border-2 border-brand-green text-brand-green font-semibold
            px-7 py-3.5 rounded-full
-           hover:bg-brand-coral hover:text-white
+           hover:bg-brand-green hover:text-white
            transition-all duration-200
            focus-visible:outline-none focus-visible:ring-2
-           focus-visible:ring-brand-coral focus-visible:ring-offset-2;
+           focus-visible:ring-brand-green focus-visible:ring-offset-2;
   }
 
   .btn-white {
     @apply inline-flex items-center justify-center gap-2
-           bg-white text-brand-charcoal font-semibold
+           bg-white text-brand-navy font-semibold
            px-7 py-3.5 rounded-full shadow-sm
            hover:bg-slate-50
            transition-all duration-200
            focus-visible:outline-none focus-visible:ring-2
            focus-visible:ring-white focus-visible:ring-offset-2
-           focus-visible:ring-offset-brand-charcoal;
+           focus-visible:ring-offset-brand-navy;
   }
 
   .btn-ghost-white {
     @apply inline-flex items-center justify-center gap-2
-           border-2 border-white/50 text-white font-semibold
+           border-2 border-white/40 text-white font-semibold
            px-7 py-3.5 rounded-full
-           hover:bg-white hover:text-brand-charcoal hover:border-white
+           hover:bg-white/10 hover:border-white/70
            transition-all duration-200;
   }
 
-  /* ── Section labels ─────────────────────────────────── */
   .section-eyebrow {
     @apply inline-block text-xs font-bold uppercase tracking-[0.15em]
-           text-brand-coral mb-3;
+           text-brand-green mb-3;
   }
 
   .section-eyebrow-light {
     @apply inline-block text-xs font-bold uppercase tracking-[0.15em]
-           text-brand-warm mb-3;
+           text-brand-green-mid mb-3;
   }
 
-  /* ── Headings ───────────────────────────────────────── */
   .section-heading {
-    @apply font-display text-3xl md:text-[2.6rem] font-bold text-slate-900
+    @apply font-display text-3xl md:text-[2.6rem] font-bold text-brand-navy
            leading-tight tracking-tight;
   }
 
@@ -106,44 +101,40 @@
     @apply text-base md:text-lg text-white/70 mt-4 max-w-2xl leading-relaxed;
   }
 
-  /* ── Dividers ───────────────────────────────────────── */
   .section-divider {
-    @apply w-12 h-1 bg-brand-coral rounded-full mx-auto mt-4 mb-0;
+    @apply w-10 h-0.5 bg-brand-green rounded-full mx-auto mt-4 mb-0;
   }
 
   .section-divider-left {
-    @apply w-12 h-1 bg-brand-coral rounded-full mt-4 mb-0;
+    @apply w-10 h-0.5 bg-brand-green rounded-full mt-4 mb-0;
   }
 
-  /* ── Cards ──────────────────────────────────────────── */
   .card-base {
     @apply bg-white rounded-2xl border border-slate-100 shadow-card
            hover:shadow-card-lg hover:-translate-y-0.5
            transition-all duration-300;
   }
 
-  /* ── Nav link ───────────────────────────────────────── */
   .nav-link {
-    @apply relative text-sm font-medium text-slate-600 hover:text-brand-coral
+    @apply relative text-sm font-medium text-slate-600 hover:text-brand-green
            transition-colors duration-200 pb-0.5
            after:absolute after:bottom-0 after:left-0 after:h-0.5
-           after:w-0 after:bg-brand-coral after:rounded-full
+           after:w-0 after:bg-brand-green after:rounded-full
            hover:after:w-full after:transition-all after:duration-200;
   }
 
-  /* ── Tags ───────────────────────────────────────────── */
   .chip {
     @apply inline-block text-xs font-semibold
-           bg-orange-50 text-brand-coral
+           bg-brand-green-xlight text-brand-green
            px-3 py-1 rounded-full;
   }
 }
 
 /* ─── Utilities ─────────────────────────────────────────── */
 @layer utilities {
-  /* Movate animated warm gradient text */
+  /* Shimmer gradient text: purple → amber → purple */
   .gradient-text {
-    background: linear-gradient(90deg, #ff312b 0%, #ff863b 30%, #ffdb4a 60%, #ff5ca9 100%);
+    background: linear-gradient(90deg, #6B21A8 0%, #F59E0B 40%, #9B59D6 70%, #6B21A8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -151,23 +142,27 @@
     animation: shimmer 5s linear infinite;
   }
 
-  /* Coral text gradient */
-  .coral-text {
-    background: linear-gradient(90deg, #ff5542 0%, #ff863b 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* Faint criss-cross grid background (purple tint) */
+  .bg-crosshatch {
+    background-image:
+      linear-gradient(rgba(107, 33, 168, 0.06) 1px, transparent 1px),
+      linear-gradient(to right, rgba(107, 33, 168, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
-  /* Animation delay helpers */
+  /* Crosshatch for dark sections */
+  .bg-crosshatch-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
   .delay-75  { animation-delay:  75ms; }
   .delay-100 { animation-delay: 100ms; }
   .delay-150 { animation-delay: 150ms; }
   .delay-200 { animation-delay: 200ms; }
-  .delay-250 { animation-delay: 250ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
-  .delay-700 { animation-delay: 700ms; }
 }
