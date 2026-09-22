@@ -76,6 +76,7 @@ export default function ContactPage() {
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
     formData.append("subject", "New Contact Submission — Zinoit");
     formData.append("from_name", "Zinoit Website");
+    formData.append("cc", "saurabh.dixit@zinoit.com");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
