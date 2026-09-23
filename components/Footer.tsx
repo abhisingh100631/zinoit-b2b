@@ -16,7 +16,6 @@ const footerLinks = {
     { label: "Cybersecurity",         href: "/industries" },
   ],
   Company: [
-    { label: "About Us",    href: "/contact"       },
     { label: "Case Studies",href: "/case-studies"  },
     { label: "Contact",     href: "/contact"       },
     { label: "Book a Call", href: "/book-call"     },
